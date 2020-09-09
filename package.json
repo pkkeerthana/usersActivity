@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start:client":"ng serve",
+    "start:db": "json-server -p 3001 -w db.json",
+    "start": "concurrently \"npm run start:client\" \"npm run start:db\"",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -12,10 +14,12 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "~9.1.12",
+    "@angular/cdk": "^9.2.4",
     "@angular/common": "~9.1.12",
     "@angular/compiler": "~9.1.12",
     "@angular/core": "~9.1.12",
     "@angular/forms": "~9.1.12",
+    "@angular/material": "^9.2.4",
     "@angular/platform-browser": "~9.1.12",
     "@angular/platform-browser-dynamic": "~9.1.12",
     "@angular/router": "~9.1.12",

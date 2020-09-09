@@ -1,3 +1,9 @@
+json-server runs on port: 3001
+
+data is present on db.json with available dates in data (month - sep)
+
+
+
 # UserActivity
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.11.
