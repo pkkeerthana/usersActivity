@@ -28,8 +28,12 @@ export class AppComponent implements OnInit{
   events: string[] = [];
 
   ngOnInit(){
+    this.dataService.postuser().subscribe(resdata => {
+      console.log(resdata);
+    });
     this.dataService.getUser().subscribe(resData => {
-      this.users = resData;
+      this.users = resData['members'];
+      console.log(this.users);
     });
   }
 
